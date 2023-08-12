@@ -8,14 +8,13 @@ services:
     ports:
       - 3000:3000
     depends_on:
-      - mysql-server
+      - pg
   
-  mysql-server:
-    image: mysql
+  pg:
+    image: postgres
     ports:
-      - 3306:3306
+      - 5432:5432
     environment:
-      - MYSQL_DATABASE=testdb
-      - MYSQL_USER=user
-      - MYSQL_PASSOWRD=123
-      - MYSQL_ROOT_PASSWORD=123
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_DB=pgdb
+      - POSTGRES_USER=user

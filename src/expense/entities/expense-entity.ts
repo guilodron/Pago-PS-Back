@@ -9,6 +9,9 @@ export class Expense {
     title: String;
 
     @Column()
+    description: String;
+
+    @Column()
     type: number;
 
     @Column({type: 'float'})

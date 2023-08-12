@@ -2,14 +2,14 @@ import { DataSource } from "typeorm"
 import { Expense } from "../expense/entities/expense-entity"
 
 export const AppDataSource = new DataSource({
-    type: 'mysql',
+    type: 'postgres',
     username: 'user',
     password: '123',
-    port: 3306,
-    database: 'testdb',
+    port: 5432,
+    database: 'pgdb',
     entities: [Expense],
     synchronize: true,
-    host: 'mysql-server'
+    host: 'pg'
 })
 
 
